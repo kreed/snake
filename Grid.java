@@ -23,11 +23,14 @@ class Grid {
 	private double blockWidth;
 	private double blockHeight;
 
-	public boolean init(String file)
+	public Grid()
 	{
 		rand = new Random();
 		startLoc = new Point();
+	}
 
+	public boolean init(String file)
+	{
 		try {
 			InputStream in = file == null ? getClass().getResourceAsStream("/snake/default.smg") : new FileInputStream(file);
 
